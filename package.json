@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "start": "node ./script.js",
+    "test": "jest",
+    "coverage": "npx jest --coverage"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "jest": "^29.2.2",
+    "mongoose": "^6.7.0"
+  }
+}
