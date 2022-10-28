@@ -1,5 +1,6 @@
 const { Service } = require('../services/service');
 const { Repository } = require('../repositories/repository');
+const { Controller } = require('../controllers/controller');
 const { Team } = require('../models/model');
 
 //factory instancia o service e o repository
@@ -7,11 +8,12 @@ const { Team } = require('../models/model');
 function factory() {
     const repository = new Repository(Team);
     const service = new Service(repository);
+    const controller = new Controller(service);
 
-    return service;
+    return controller;
 }
 
-const service = factory();
+const controller = factory();
 
-module.exports = { service };
+module.exports = { controller };
 

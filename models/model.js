@@ -39,7 +39,6 @@ const teamSchema = new Schema({
 //as nossas queries de banco de dados estão atribuidas ao objeto Team
 const Team = model('Team', teamSchema);
 
-
 module.exports = { Team }
 
 
