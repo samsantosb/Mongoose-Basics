@@ -2,15 +2,9 @@
 //de banco de dados
 const { connect, connection } = require('mongoose');
 
-//aqui esta o import do .env
-require('dotenv').config();
-
-//aqui esta a nossa chave de conexão
-const mongo = process.env.MONGO;
-
-function mongoConnect() {
+function mongoConnect(key) {
     //criamos aqui uma função que se conecta no banco de dados
-    connect(mongo);
+    connect(key);
     connection.on('error', () => {
         console.log('Error connecting to MongoDB')
     });

@@ -1,8 +1,8 @@
 const { mongoConnect } = require('./db/mongo.connect');
 const { router } = require('./routes/routes');
+const { mongoKey } = require('./config');
 
-
-mongoConnect();
+mongoConnect(mongoKey);
 const express = require('express');
 const app = express();
 const port = 3000;
